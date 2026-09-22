@@ -1,4 +1,4 @@
-module VI1
+module VI_WCK
 
 using AppleAccelerate
 using LinearAlgebra
@@ -9,7 +9,9 @@ using SparseArrays
 
 
 include("Solvers/alg1.jl")
+include("Examples/Example2/Ex2.jl")
 
 export alg1
+export Fe2, TestE2, Ge2, TestE2fp
 
 end

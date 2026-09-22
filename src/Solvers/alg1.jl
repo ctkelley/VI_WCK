@@ -17,15 +17,26 @@ function alg1(x, F, pdata, proj, tau; maxit = 100)
     ithist = zeros(maxit + 1)
     for i in 1:maxit
         fx = F(x, pdata)
-        ithist[i] = norm(fx, Inf)
-        x .= proj.(x - tau * fx)
+        G = proj.(x - tau * fx)
+        ithist[i] = norm(x-G, Inf)
+        x .= G
     end
     fx = F(x, pdata)
-    ithist[maxit + 1] = norm(fx, Inf)
+    G = proj.(x - tau * fx)
+    ithist[maxit + 1] = norm(x-G, Inf)
     return (sol = x, ithist = ithist)
 end
 
-function proj0(x)
-    proj0 = max(x, 0.0)
-    return (proj0)
+function alg1fp(x, G, gdata; maxit=100)
+    ithist = zeros(maxit + 1)
+    for i in 1:maxit
+        Gx=G(x,gdata)
+        ithist[i] = norm(x-Gx, Inf)
+        x .= G
+    end
+    Gx = G(x,gdata)
+    ithist[maxit + 1] = norm(x-Gx, Inf)
+    return (sol = x, ithist = ithist)
 end
+
+
