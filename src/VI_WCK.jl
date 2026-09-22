@@ -10,6 +10,6 @@ using SparseArrays
 
 include("Solvers/alg1.jl")
 
-export tstA
+export alg1
 
 end
