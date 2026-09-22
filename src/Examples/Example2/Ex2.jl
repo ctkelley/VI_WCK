@@ -11,8 +11,8 @@ return xp
 end
 
 function build_ex2(tau)
-gdata=(tau=tau, proj.proje2, F=Fe2, pdata=[])
-return gdaga
+gdata=(tau=tau, proj=proje2, F=Fe2, pdata=[])
+return gdata
 end
 
 function Ge2(x,gdata)
@@ -25,7 +25,7 @@ G = proj.(x - tau*fx)
 return G
 end
 
-TestE2fp(x0=[1.0,2.0,-1.0]; tau=.1)
+function TestE2fp(x0=[1.0,2.0,-1.0]; tau=.1)
 gdata = build_ex2(tau)
 x=copy(x0)
 oute2=alg1fp(x, Ge2, gdata)

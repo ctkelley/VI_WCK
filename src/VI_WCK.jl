@@ -6,6 +6,7 @@ using LinearAlgebra.BLAS
 using LinearAlgebra.LAPACK
 using SuiteSparse
 using SparseArrays
+using SIAMFANLEquations
 
 
 include("Solvers/alg1.jl")

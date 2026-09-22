@@ -32,7 +32,7 @@ function alg1fp(x, G, gdata; maxit=100)
     for i in 1:maxit
         Gx=G(x,gdata)
         ithist[i] = norm(x-Gx, Inf)
-        x .= G
+        x .= Gx
     end
     Gx = G(x,gdata)
     ithist[maxit + 1] = norm(x-Gx, Inf)
