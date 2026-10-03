@@ -1,6 +1,5 @@
 module VI_WCK
 
-using AppleAccelerate
 using LinearAlgebra
 using LinearAlgebra.BLAS
 using LinearAlgebra.LAPACK
