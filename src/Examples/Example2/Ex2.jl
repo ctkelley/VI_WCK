@@ -71,8 +71,9 @@ function Alg1E2(x0=[1.0,2.0,-1.0]; tau=.1)
 gdata = build_ex2(tau)
 x=copy(x0)
 oute2=alg1fp(x, Ge2, gdata)
-semilogy(oute2.ithist/oute2.ithist[1])
+semilogy(oute2.ithist/oute2.ithist[1],"k-")
 xlabel=("Iterations")
 ylabel("Relative Residual Norm")
+title("Alg 1; Example 2")
 end
 
