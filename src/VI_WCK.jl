@@ -28,6 +28,7 @@ import SIAMFANLEquations.CloseIteration
 include("Solvers/alg1.jl")
 include("Solvers/paasol.jl")
 include("Examples/Example2/Ex2.jl")
+include("Tools/Plot_VI_Examples.jl")
 
 export alg1, paasol
 export Alg1E2, Alg1E2AA, AAE2Plot

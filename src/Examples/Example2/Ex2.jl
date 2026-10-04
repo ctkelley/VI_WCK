@@ -54,7 +54,8 @@ end
 
 #
 # build the data for the problem which we pass
-# to the functions
+# to the functions. This example has no intrinsic
+# pdata.
 #
 function build_ex2(tau)
     gdata = (tau = tau, proj = proje2, F = Fe2, pdata = [])
@@ -119,24 +120,8 @@ function AAE2Plot(
         x0 = [1.0, 2.0, -1.0]; tau = 0.1, maxit = 100,
         proj = proje2, marray = [0, 1, 2]
     )
-    mmax = 5
-    N = length(x0)
-    pstr = ["k-", "k-.", "k--", "k-o", "k."]
-    HistV = Vector{Vector{Float64}}()
-    LegD = Vector{String}()
-    plot_hist = Vector{Data_4_Plots}()
-    Vstore = zeros(N, 3 * mmax + 3)
     pdata = build_ex2(tau)
-    nm = length(marray)
-    for i in 1:nm
-        m = marray[i]
-        push!(LegD, "m=$m")
-        outaa = paasol(Ge2!, x0, m, Vstore, proj; pdata = pdata, maxit = maxit)
-        push!(HistV, outaa.history / outaa.history[1])
-        itl = length(outaa.history)
-        xcord = 0:1:(itl - 1)
-        semilogy(xcord, HistV[i], pstr[i])
-    end
-    legend(LegD)
-    return HistV
+    HistV=Plot_VI_Examples(Ge2!, proj, x0, pdata;
+      maxit=100, marray=[0,1,2])
+    HistV
 end
