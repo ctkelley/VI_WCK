@@ -1,5 +1,12 @@
 module VI_WCK
 
+struct Data_4_Plots
+    relreshist::Vector{Float64}
+    itdata::Vector{Int}
+    fdata::Vector{Int}
+    legend::String
+end
+
 using LinearAlgebra
 using LinearAlgebra.BLAS
 using LinearAlgebra.LAPACK
@@ -23,6 +30,5 @@ include("Solvers/paasol.jl")
 include("Examples/Example2/Ex2.jl")
 
 export alg1, paasol
-export Alg1E2, Alg1E2AA
-
+export Alg1E2, Alg1E2AA, AAE2Plot
 end
