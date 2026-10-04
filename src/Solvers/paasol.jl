@@ -190,7 +190,9 @@ function paasol(
             @views theta = ThetA[1:mk]
             @views tres = TmPReS[1:mk]
             mul!(tres, QA', res)
-            theta .= RA \ tres
+RI=pinv(RA)
+theta=RI*tres
+#            theta .= RA \ tres
             condit = cond(RA)
             alphanrm = falpha(alpha, theta, min(m, k))
             copy!(sol, gx)

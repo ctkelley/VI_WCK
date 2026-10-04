@@ -3,7 +3,7 @@
 #
 function Plot_VI_Examples(GF!, proj, x0, pdata;
       maxit=100, marray=[0,1,2])
-    mmax = 5
+    mmax = maximum(marray)
     N = length(x0)
     pstr = ["k-", "k-.", "k--", "k-o", "k."]
     HistV = Vector{Vector{Float64}}()

@@ -110,7 +110,8 @@ function Alg1E2AA(x0 = [1.0, 2.0, -1.0]; tau = 0.1, m = 3, maxit = 100, proj = p
     semilogy(outaa.history / outaa.history[1], "k-")
     xlabel = ("Iterations")
     ylabel("Relative Residual Norm")
-    return title("Alg 1; Example 2")
+    title("Alg 1; Example 2")
+    return outaa.solution
 end
 
 #
@@ -122,6 +123,6 @@ function AAE2Plot(
     )
     pdata = build_ex2(tau)
     HistV=Plot_VI_Examples(Ge2!, proj, x0, pdata;
-      maxit=100, marray=[0,1,2])
+      maxit=100, marray=marray)
     HistV
 end
