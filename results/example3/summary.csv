@@ -1,0 +1,4 @@
+method,m,iterations,max_iterations,converged,target_relative_residual,final_error,minimum_error,final_relative_residual,accepted,rejected,acceptance_rate
+Algorithm 1,0,4982,10000,True,1e-08,8.75561845248285e-11,8.75561845248285e-11,9.086896589778125e-09,,,
+AA without safeguard (m=1),1,10000,10000,False,1e-08,1.0,0.998752288208964,0.09972740753504393,,,
+Algorithm 2 (m=1),1,1476,10000,True,1e-08,5.1995963090689656e-11,5.1995963090689656e-11,6.309477583329419e-09,795,681,0.5386178861788617
