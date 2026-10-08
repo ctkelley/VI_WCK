@@ -1,6 +1,6 @@
-# PAA-VI: numerical experiments
+# Projection Anderson Acceleration Algorithm
 
-Python code for the experiments in Section 6 of *A Projection Anderson Acceleration Algorithm for Non-quasi-monotone Variational Inequalities with Hoelder Continuous Terms*.
+Python code for the experiments in Section 6 of *A Projection Anderson Acceleration Algorithm for Non-quasi-monotone Variational Inequalities with Hoelder Continuous Terms* by X. Chen, C. T. Kelley, and L. Wang.
 
 ## Experiments
 
