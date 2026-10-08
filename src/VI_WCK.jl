@@ -1,12 +1,5 @@
 module VI_WCK
 
-struct Data_4_Plots
-    relreshist::Vector{Float64}
-    itdata::Vector{Int}
-    fdata::Vector{Int}
-    legend::String
-end
-
 using LinearAlgebra
 using LinearAlgebra.BLAS
 using LinearAlgebra.LAPACK
